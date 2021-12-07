@@ -19,7 +19,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "rinkeby",
   networks: {
     hardhat: {
       chainId: 1337
@@ -27,6 +27,10 @@ module.exports = {
     mumbai: {
       url: "https://rpc-mumbai.matic.today",
       accounts: [privateKey]
+    },
+    rinkeby:{
+      url:"https://rinkeby.infura.io/v3/83b57356a6be4e3e99890c21874b8d72",
+      accounts:[privateKey]
     }
   },
   solidity: {
